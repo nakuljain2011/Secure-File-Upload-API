@@ -39,7 +39,7 @@ A secure RESTful API built with **Node.js** and **Express.js** that supports enc
 
 2. **Start Server**
 
-  npm start
+   npm start
   
 Server runs at: http://localhost:3000
 
@@ -68,9 +68,20 @@ Headers: Authorization: Bearer <token>
 ---
 🔐 Security Notes
 
-Set a strong JWT_SECRET in production via environment variable.
-To persist file access across restarts, store a static ENCRYPTION_KEY securely (e.g., .env).
-All actions are logged in logs/audit.log.
+- Set a strong JWT_SECRET in production via environment variable.
+- To persist file access across restarts, store a static ENCRYPTION_KEY securely (e.g., .env).
+- All actions are logged in logs/audit.log.
+
+---
+📘 Sample Log
+
+{
+  "action": "upload",
+  "user": "testuser",
+  "file": "example.txt",
+  "status": "success"
+}
+
 
 
 
